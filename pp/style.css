@@ -1,0 +1,519 @@
+/* =====================================
+   RESET
+===================================== */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+    user-select: none;
+
+}
+
+
+/* =====================================
+   BODY
+===================================== */
+
+body {
+
+    background-color: #1a0f07;
+
+    background-image:
+        radial-gradient(
+            #2c1b0e 2px,
+            transparent 2px
+        );
+
+    background-size: 16px 16px;
+
+    color: #ffffff;
+
+    font-family:
+        'Press Start 2P',
+        cursive,
+        monospace;
+
+    overflow-x: hidden;
+
+    min-height: 100vh;
+
+}
+
+
+/* =====================================
+   LOADING SCREEN
+===================================== */
+
+#loading-screen {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    background-color: #ef323a;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s;
+
+}
+
+
+/* =====================================
+   LOGO
+===================================== */
+
+.mojang-logo {
+
+    font-size: 2.2rem;
+
+    font-weight: bold;
+
+    color: white;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 40px;
+
+    text-shadow:
+        4px 4px 0px #000;
+
+    text-align: center;
+
+}
+
+
+/* =====================================
+   LOADING BAR
+===================================== */
+
+.loading-bar-container {
+
+    width: 280px;
+
+    height: 20px;
+
+    border: 4px solid #000;
+
+    background-color: #555;
+
+    position: relative;
+
+}
+
+
+#loading-bar {
+
+    width: 0%;
+
+    height: 100%;
+
+    background-color: #ffffff;
+
+    transition:
+        width 0.1s linear;
+
+}
+
+
+/* =====================================
+   LOADING TEXT
+===================================== */
+
+#splash-text {
+
+    margin-top: 20px;
+
+    color: #ffff55;
+
+    font-size: 0.8rem;
+
+    text-shadow:
+        2px 2px 0px #3f3f00;
+
+}
+
+
+/* =====================================
+   ENTER BUTTON
+===================================== */
+
+.loading-button {
+
+    width: 280px;
+
+    margin-top: 30px;
+
+}
+
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+
+#main-content {
+
+    opacity: 0;
+
+    transition:
+        opacity 1s ease;
+
+    padding: 15px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+header {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    margin-top: 10px;
+
+}
+
+
+.title {
+
+    font-size: 2rem;
+
+    color: #55ff55;
+
+    text-shadow:
+        3px 3px 0px #00aa00,
+        5px 5px 0px #000;
+
+}
+
+
+.subtitle {
+
+    font-size: 0.85rem;
+
+    color: #ffff55;
+
+    margin-top: 12px;
+
+    text-shadow:
+        2px 2px 0px #000;
+
+}
+
+
+/* =====================================
+   GAME CONTAINER
+===================================== */
+
+.game-container {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+/* =====================================
+   3D CANVAS
+===================================== */
+
+#canvas-container {
+
+    width: 480px;
+
+    height: 480px;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #6da3df 0%,
+            #a0c6ee 100%
+        );
+
+    border: 6px solid #3c2415;
+
+    box-shadow:
+        6px 6px 0px #000;
+
+    border-radius: 4px;
+
+    overflow: hidden;
+
+}
+
+
+/* =====================================
+   QR BOX
+===================================== */
+
+.pixel-box {
+
+    background-color: #727272;
+
+    border: 6px solid #3c2415;
+
+    padding: 25px 15px;
+
+    text-align: center;
+
+    box-shadow:
+        6px 6px 0px #000;
+
+    width: 480px;
+
+    max-width: 100%;
+
+}
+
+
+.pixel-box h2 {
+
+    font-size: 1rem;
+
+    color: #ffffff;
+
+    text-shadow:
+        2px 2px 0px #000;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* =====================================
+   QR FRAME
+===================================== */
+
+.qr-frame {
+
+    background-color: #ffffff;
+
+    border: 5px solid #000;
+
+    padding: 12px;
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    box-shadow:
+        inset 4px 4px 0px #ccc,
+        4px 4px 0px #222;
+
+}
+
+
+.qr-frame img {
+
+    width: 250px;
+
+    height: 250px;
+
+    object-fit: contain;
+
+    image-rendering: pixelated;
+
+    display: block;
+
+    margin: 0 auto;
+
+}
+
+
+/* =====================================
+   QR TEXT
+===================================== */
+
+.qr-instruction {
+
+    font-size: 0.65rem;
+
+    color: #ffff55;
+
+    margin-bottom: 15px;
+
+    line-height: 1.5;
+
+    text-shadow:
+        1px 1px 0px #000;
+
+}
+
+
+/* =====================================
+   MINECRAFT BUTTON
+===================================== */
+
+.minecraft-btn {
+
+    background-color: #999999;
+
+    border: 4px solid #000000;
+
+    border-top-color: #dbdbdb;
+
+    border-left-color: #dbdbdb;
+
+    border-right-color: #555555;
+
+    border-bottom-color: #555555;
+
+    color: #ffffff;
+
+    padding: 12px 15px;
+
+    font-family:
+        'Press Start 2P',
+        cursive;
+
+    font-size: 0.65rem;
+
+    cursor: pointer;
+
+    text-shadow:
+        2px 2px 0px #000;
+
+    width: 100%;
+
+}
+
+
+.minecraft-btn:hover {
+
+    background-color: #aaaaaa;
+
+}
+
+
+.minecraft-btn:active {
+
+    border-top-color: #555555;
+
+    border-left-color: #555555;
+
+    border-right-color: #dbdbdb;
+
+    border-bottom-color: #dbdbdb;
+
+    transform:
+        translate(2px, 2px);
+
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    padding-bottom: 15px;
+
+}
+
+
+.footer-text {
+
+    font-size: 0.55rem;
+
+    color: #888;
+
+    margin-top: 10px;
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 520px) {
+
+
+    #canvas-container,
+    .pixel-box {
+
+        width: 100%;
+
+    }
+
+
+    #canvas-container {
+
+        height: 380px;
+
+    }
+
+
+    .pixel-box {
+
+        height: auto;
+
+    }
+
+
+    .qr-frame img {
+
+        width: 180px;
+
+        height: 180px;
+
+    }
+
+
+    .title {
+
+        font-size: 1.3rem;
+
+    }
+
+
+    .mojang-logo {
+
+        font-size: 1.4rem;
+
+    }
+
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Made with Muse - Thank You!</title>
+
+
+    <!-- Minecraft Style Font -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Three.js -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js">
+    </script>
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         BACKGROUND MUSIC
+    ====================================== -->
+
+    <audio
+        id="backgroundMusic"
+        loop
+        preload="auto">
+
+        <source
+            src="music.mp3/Justin Bieber - Baby ft. Ludacris.mp3"
+            type="audio/mpeg">
+
+    </audio>
+
+
+
+    <!-- =====================================
+         LOADING SCREEN
+    ====================================== -->
+
+    <div id="loading-screen">
+
+        <div class="mojang-logo">
+            Made with Muse
+        </div>
+
+
+        <div class="loading-bar-container">
+
+            <div id="loading-bar"></div>
+
+        </div>
+
+
+        <div id="splash-text">
+            Loading Terrain...
+        </div>
+
+
+        <button
+            id="enter-button"
+            class="minecraft-btn loading-button">
+
+            ENTER WORLD 🎵
+
+        </button>
+
+    </div>
+
+
+
+    <!-- =====================================
+         MAIN CONTENT
+    ====================================== -->
+
+    <div id="main-content">
+
+
+        <header>
+
+            <h1 class="pixel-text title">
+                Made with Muse 🌸
+            </h1>
+
+
+            <p class="pixel-text subtitle">
+                Thank You For Your Purchase!
+            </p>
+
+        </header>
+
+
+
+        <!-- =================================
+             GAME CONTAINER
+        ================================== -->
+
+        <div class="game-container">
+
+
+            <!-- 3D CHARACTER -->
+
+            <div id="canvas-container">
+
+                <!-- Character Speech -->
+
+                <div
+                    id="speech-bubble"
+                    style="display:none;">
+
+                    Thank you for purchasing our product!
+                    Scan the QR code to connect with
+                    Made with Muse!
+                    Explore our handmade floral creations
+                    crafted for every special moment.
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 QR CODE
+            ================================== -->
+
+            <div class="qr-container pixel-box">
+
+
+                <h2 class="pixel-text">
+                    CONNECT WITH US
+                </h2>
+
+
+                <div class="qr-frame">
+
+                    <img
+                        id="qr-image"
+                        src="asset/Facebook Share QR.png"
+                        alt="Made with Muse Facebook QR Code">
+
+                </div>
+
+
+                <p class="pixel-text qr-instruction">
+
+                    Scan this QR code to connect
+                    with Made with Muse!
+
+                </p>
+
+
+                <button
+                    class="minecraft-btn"
+                    onclick="speakMessage()">
+
+                    🔊 Hear Character Again
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             FOOTER
+        ================================== -->
+
+        <footer>
+
+            <p class="pixel-text footer-text">
+
+                Thank you for connecting with us ❤️
+
+            </p>
+
+            <p class="pixel-text footer-text">
+
+                Made with Muse © 2026
+
+            </p>
+
+        </footer>
+
+
+    </div>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
